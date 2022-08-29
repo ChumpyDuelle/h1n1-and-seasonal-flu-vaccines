@@ -6,7 +6,11 @@
 
 ## Overview
 
-A one-paragraph overview of the project, including the business problem, data, methods, results and recommendations.
+Can we predict whether people got H1N1 and seasonal flu vaccines using data collected in the National 2009 H1N1 Flu Survey?
+
+A one-paragraph overview of the project, including the business problem, data, methods, results and recommendations:
+
+In this project, we will be attempting to address the following problem: how can we increase innoculation rates in the population against H1N1 and other highly infectious respiratory diseases? To answer this question, we will be looking at data from the National 2009 H1N1 Flu Survey using simple data exploration, data analysis, and data modeling algorithms like Logistic Regression and Random Forests. Ultimately, we find that we can predict H1N1 vaccination status accurately 85% of the time using a Logistic Regression model and that the three most significant features for guiding this prediction are whether or not a respondent was vaccinated against the seasonal flu that year, whether or not the H1N1 vaccine was reccommended to them by a doctor, and whether or not that believe that the H1N1 vaccine is effective. Based on these results, we reccommend that public health officials increase education about how and why seasonal flu vaccination works, partner with doctors and other medical professionals to leverage their leadership in their local communities, and provide robust documentation to the public with respect to how and why this specific vaccine against H1N1 works.
 
 ## Business Problem
 
@@ -244,8 +248,6 @@ Based on the above image of the feature importance of this model, we can see tha
 ***
 
 ## Conclusions
-
-Provide your conclusions about the work you've done, including any limitations or next steps.
 
 ***
 Questions to consider:
