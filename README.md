@@ -251,8 +251,8 @@ Based on the above image of the feature importance of this model, we can see tha
 
 ***
 Questions to consider:
-* What would you recommend the business do as a result of this work?
-    * As a result of this project, we would recommend that the business observe the following steps:
+* What would you recommend the stakeholder do as a result of this work?
+    * As a result of this project, we would recommend that public health officials observe the following steps:
         1. Educate the general population on how and why the seasonal flu vaccine works.
         2. Partner with doctors and other medical professionals to encourage them to encourage their patients to get vaccinated, as their reccomendations directly contribute to the number of people getting the vaccine.
         3. Provide robust documentation to the population on how and why this specific vaccine for H1N1 works. In addition to understanding how and why vaccines against influenza work in the first place, believing that this specific vaccine also works is a critical element in the decision of an individual to get it or not.
