@@ -6,26 +6,30 @@
 
 ## Overview
 
-A one-paragraph overview of the project, including the business problem, data, methods, results and recommendations.
+Can we predict whether people got H1N1 and seasonal flu vaccines using data collected in the National 2009 H1N1 Flu Survey?
 
-## Business Problem
+A one-paragraph overview of the project, including the problem, data, methods, results and recommendations:
 
-Summary of the business problem we are trying to solve, and the data questions that we plan to answer to solve them.
+In this project, we will be attempting to address the following problem: how can we increase inoculation rates in the population against H1N1 and other highly infectious respiratory diseases? To answer this question, we will be looking at data from the National 2009 H1N1 Flu Survey using simple data exploration, data analysis, and data modeling algorithms like Logistic Regression and Random Forests. Ultimately, we find that we can predict H1N1 vaccination status accurately 85% of the time using a Logistic Regression model and that the three most significant features for guiding this prediction are whether or not a respondent was vaccinated against the seasonal flu that year, whether or not the H1N1 vaccine was recommended to them by a doctor, and whether or not that believe that the H1N1 vaccine is effective. Based on these results, we recommend that public health officials increase education about how and why seasonal flu vaccination works, partner with doctors and other medical professionals to leverage their leadership in their local communities, and provide robust documentation to the public with respect to how and why this specific vaccine against H1N1 works.
+
+## Objectives
+
+Summary of the problem we are trying to solve, and the data questions that we plan to answer to solve them.
 
 ***
 
 Questions to consider:
 
-* What are the business's pain points related to ths project?
-    * The business's pain points related to this project are these:
+* What are the organization's pain points related to this project?
+    * The organization's pain points related to this project are these:
         * **Primary**: can we predict whether people got H1N1 vaccines using data collected in the National 2009 H1N1 Flu Survey?
         * **Secondary**: can we infer which variables of this survey are most causing a change in vaccination status for H1N1?
-        * **Tertiary**: can we provide actionable recommendations to improve the rate of innoculation against H1N1?
+        * **Tertiary**: can we provide actionable recommendations to improve the rate of inoculation against H1N1?
 * How did we pick the data analysis question(s) that we did?
     * With respect to each of the above questions, we picked the questions as a result of the following thought process:
-        * Ultimately, what we would like to be able to do is increase the population's rate of innoculation against highly infectious respiratory diseases. In order to know what would have to be done to take action in this way, we have to understand what variables are most causing a change in vaccination status for individuals, as well as which of those variables we can actually control. Finally, we can confirm whether or not our understanding of these relationships can be used to accurately predict vaccination status for individuals.
-* Why are these questions important from a business perspective?
-    * These questions are important from a business perspective because they allow public health officials to make informed decisions about what actions they can take to attempt to improve the resiliency of the population against highly infectious respiratory diseases.
+        * Ultimately, what we would like to be able to do is increase the population's rate of inoculation against highly infectious respiratory diseases. In order to know what would have to be done to take action in this way, we have to understand what variables are most causing a change in vaccination status for individuals, as well as which of those variables we can actually control. Finally, we can confirm whether or not our understanding of these relationships can be used to accurately predict vaccination status for individuals.
+* Why are these questions important from the organization's perspective?
+    * These questions are important from the organization's perspective because they allow public health officials to make informed decisions about what actions they can take to attempt to improve the resiliency of the population against highly infectious respiratory diseases.
 
 ***
 
@@ -40,12 +44,12 @@ Questions to consider:
 * Where did the data come from?
     * The data comes from the National 2009 H1N1 Flu Survey.
 * How do they relate to the data analysis questions?
-    * The National 2009 H1N1 Flu Survery relates to the data analysis questions in that this survey was specifically designed to develop an understanding of how people’s backgrounds, opinions, and health behaviors are related to their personal vaccination patterns.
+    * The National 2009 H1N1 Flu Survey relates to the data analysis questions in that this survey was specifically designed to develop an understanding of how people’s backgrounds, opinions, and health behaviors are related to their personal vaccination patterns.
 * What do the data represent?
     * Each entry in the data represents the survey responses of one individual.
 * Who is in the sample?
-    * The sample is comprised of individuals from various psychographics and demographics across the United States.
-* What variable are includeed?
+    * The sample is composed of individuals from various psychographics and demographics across the United States.
+* What variable are included?
     * The variables included are as follows:
     * For all binary variables: 0 = No; 1 = Yes.
         * **respondent_id**
@@ -89,7 +93,7 @@ Questions to consider:
             * 1 = Not at all effective;
             * 2 = Not very effective;
             * 3 = Don't know;
-            * 4 = Somehwat effective;
+            * 4 = Somewhat effective;
             * 5 = Very effective.
         * **opinion_h1n1_risk** - Respondent's opinion about risk of getting sick with H1N1 flu without vaccine.
             * 1 = Very low;
@@ -107,7 +111,7 @@ Questions to consider:
             * 1 = Not at all effective;
             * 2 = Not very effective;
             * 3 = Don't know;
-            * 4 = Somehwat effective;
+            * 4 = Somewhat effective;
             * 5 = Very effective.
         * **opinion_seas_risk** - Respondent's opinion about risk of getting sick with seasonal flu without vaccine.
             * 1 = Very low;
@@ -184,7 +188,7 @@ Questions to consider:
         * Executed a OneHotEncoder for all features of the object data type. Given that there was no inherent rank to any of the object features, a OneHotEncoder was applied universally to those data types in lieu of using an OrdinalEncoder for any of them.
     * We analyzed the data in the following ways:
         * Simple dataframe manipulation:
-            * Observed measures of central tendency for varioues features
+            * Observed measures of central tendency for various features
             * Observed distribution of the features and of the target
             * Observed correlation of features to target and features to features
         * Visualized correlation of features and target via heatmapping
@@ -192,8 +196,8 @@ Questions to consider:
         * Dummy Classifier
         * Logistic Regression
         * Random Forest
-* Why is this approach appropriate given the data and the business problem?
-    * The approaches were appropraite given the data and the business problem because they allowed us to eliminate features which could not rightly contribute toward the inference or prediction of the target without arbitrarily skewing the distribution of those features.
+* Why is this approach appropriate given the data and the problem?
+    * The approaches were appropriate given the data and the problem because they allowed us to eliminate features which could not rightly contribute toward the inference or prediction of the target without arbitrarily skewing the distribution of those features.
 ***
 
 ## Results
@@ -236,7 +240,7 @@ Our most successful model in the iterations we ran of a Dummy Classifier, Logist
 
 ![predictors](./images/top-ten-predictors.png)
 
-Based on the above image of the feature importance of this model, we can see that the three most influental features in predicting whether or not an individual will get the vaccine for the H1N1 flu are these:
+Based on the above image of the feature importance of this model, we can see that the three most influential features in predicting whether or not an individual will get the vaccine for the H1N1 flu are these:
 1. seasonal_vaccine
 2. doctor_recc_h1n1
 3. opinion_h1n1_vacc_effective
@@ -245,34 +249,32 @@ Based on the above image of the feature importance of this model, we can see tha
 
 ## Conclusions
 
-Provide your conclusions about the work you've done, including any limitations or next steps.
-
 ***
 Questions to consider:
-* What would you recommend the business do as a result of this work?
-    * As a result of this project, we would recommend that the business observe the following steps:
+* What would you recommend the stakeholder do as a result of this work?
+    * As a result of this project, we would recommend that public health officials observe the following steps:
         1. Educate the general population on how and why the seasonal flu vaccine works.
-        2. Partner with doctors and other medical professionals to encourage them to encourage their patients to get vaccinated, as their reccomendations directly contribute to the number of people getting the vaccine.
+        2. Partner with doctors and other medical professionals to encourage them to encourage their patients to get vaccinated, as their recomendations directly contribute to the number of people getting the vaccine.
         3. Provide robust documentation to the population on how and why this specific vaccine for H1N1 works. In addition to understanding how and why vaccines against influenza work in the first place, believing that this specific vaccine also works is a critical element in the decision of an individual to get it or not.
-* What are some reasons why your analysis might not fully solve the business problem?
-    * The number one reason why this analysis might not fully solve the business problem is this:
-        * Despite iterations on multiple models, our best model still presents with a fairly low recall. This may indicate that there are inderlying details in the understanding of how people’s backgrounds, opinions, and health behaviors are related to their personal vaccination patterns that this survey is not picking up on.
+* What are some reasons why your analysis might not fully solve the problem?
+    * The number one reason why this analysis might not fully solve the problem is this:
+        * Despite iterations on multiple models, our best model still presents with a fairly low recall. This may indicate that there are underlying details in the understanding of how people’s backgrounds, opinions, and health behaviors are related to their personal vaccination patterns that this survey is not picking up on.
 * What else could you do in the future to improve this project?
     * Moving forward, we would like to expand the model iteration process to include even more robust models like XGBoost.
 ***
 
 ## For More Information
 
-Please review our full analysis in [our Jupyter Notebook](./h1n1-and-seasonal-flu-vaccine.ipynb) or our [presentation](./DS_Project_Presentation.pdf).
+Please review our full analysis in [our Jupyter Notebook](./h1n1-and-seasonal-flu-vaccines.ipynb) or our [presentation](./H1N1-and-Seasonal-Flu-Vaccines.pdf).
 
 For any additional questions, please contact **Ian Butler ianbutleremail@gmail.com**
 
 ## Repository Structure
 
 ```
-├── README.md                             <- The top-level README for reviewers of this project
-├── h1n1-and-seasonal-flu-vaccine.ipynb   <- Narrative documentation of analysis in Jupyter notebook
-├── DS_Project_Presentation.pdf           <- PDF version of project presentation
-├── data                                  <- Sourced externally
-└── images                                <- Both sourced externally and generated from code
+├── README.md                                    <- The top-level README for reviewers of this project
+├── h1n1-and-seasonal-flu-vaccine.ipynb          <- Narrative documentation of analysis in Jupyter notebook
+├── H1N1 and Seasonal Flu Vaccines.pdf           <- PDF version of project presentation
+├── data                                         <- Sourced externally
+└── images                                       <- Both sourced externally and generated from code
 ```
