@@ -8,28 +8,28 @@
 
 Can we predict whether people got H1N1 and seasonal flu vaccines using data collected in the National 2009 H1N1 Flu Survey?
 
-A one-paragraph overview of the project, including the business problem, data, methods, results and recommendations:
+A one-paragraph overview of the project, including the problem, data, methods, results and recommendations:
 
 In this project, we will be attempting to address the following problem: how can we increase innoculation rates in the population against H1N1 and other highly infectious respiratory diseases? To answer this question, we will be looking at data from the National 2009 H1N1 Flu Survey using simple data exploration, data analysis, and data modeling algorithms like Logistic Regression and Random Forests. Ultimately, we find that we can predict H1N1 vaccination status accurately 85% of the time using a Logistic Regression model and that the three most significant features for guiding this prediction are whether or not a respondent was vaccinated against the seasonal flu that year, whether or not the H1N1 vaccine was reccommended to them by a doctor, and whether or not that believe that the H1N1 vaccine is effective. Based on these results, we reccommend that public health officials increase education about how and why seasonal flu vaccination works, partner with doctors and other medical professionals to leverage their leadership in their local communities, and provide robust documentation to the public with respect to how and why this specific vaccine against H1N1 works.
 
-## Business Problem
+## Objectives
 
-Summary of the business problem we are trying to solve, and the data questions that we plan to answer to solve them.
+Summary of the problem we are trying to solve, and the data questions that we plan to answer to solve them.
 
 ***
 
 Questions to consider:
 
-* What are the business's pain points related to ths project?
-    * The business's pain points related to this project are these:
+* What are the organization's pain points related to ths project?
+    * The organization's pain points related to this project are these:
         * **Primary**: can we predict whether people got H1N1 vaccines using data collected in the National 2009 H1N1 Flu Survey?
         * **Secondary**: can we infer which variables of this survey are most causing a change in vaccination status for H1N1?
         * **Tertiary**: can we provide actionable recommendations to improve the rate of innoculation against H1N1?
 * How did we pick the data analysis question(s) that we did?
     * With respect to each of the above questions, we picked the questions as a result of the following thought process:
         * Ultimately, what we would like to be able to do is increase the population's rate of innoculation against highly infectious respiratory diseases. In order to know what would have to be done to take action in this way, we have to understand what variables are most causing a change in vaccination status for individuals, as well as which of those variables we can actually control. Finally, we can confirm whether or not our understanding of these relationships can be used to accurately predict vaccination status for individuals.
-* Why are these questions important from a business perspective?
-    * These questions are important from a business perspective because they allow public health officials to make informed decisions about what actions they can take to attempt to improve the resiliency of the population against highly infectious respiratory diseases.
+* Why are these questions important from the organization's perspective?
+    * These questions are important from the organization's perspective because they allow public health officials to make informed decisions about what actions they can take to attempt to improve the resiliency of the population against highly infectious respiratory diseases.
 
 ***
 
@@ -196,8 +196,8 @@ Questions to consider:
         * Dummy Classifier
         * Logistic Regression
         * Random Forest
-* Why is this approach appropriate given the data and the business problem?
-    * The approaches were appropraite given the data and the business problem because they allowed us to eliminate features which could not rightly contribute toward the inference or prediction of the target without arbitrarily skewing the distribution of those features.
+* Why is this approach appropriate given the data and the problem?
+    * The approaches were appropraite given the data and the problem because they allowed us to eliminate features which could not rightly contribute toward the inference or prediction of the target without arbitrarily skewing the distribution of those features.
 ***
 
 ## Results
@@ -256,8 +256,8 @@ Questions to consider:
         1. Educate the general population on how and why the seasonal flu vaccine works.
         2. Partner with doctors and other medical professionals to encourage them to encourage their patients to get vaccinated, as their reccomendations directly contribute to the number of people getting the vaccine.
         3. Provide robust documentation to the population on how and why this specific vaccine for H1N1 works. In addition to understanding how and why vaccines against influenza work in the first place, believing that this specific vaccine also works is a critical element in the decision of an individual to get it or not.
-* What are some reasons why your analysis might not fully solve the business problem?
-    * The number one reason why this analysis might not fully solve the business problem is this:
+* What are some reasons why your analysis might not fully solve the problem?
+    * The number one reason why this analysis might not fully solve the problem is this:
         * Despite iterations on multiple models, our best model still presents with a fairly low recall. This may indicate that there are inderlying details in the understanding of how people’s backgrounds, opinions, and health behaviors are related to their personal vaccination patterns that this survey is not picking up on.
 * What else could you do in the future to improve this project?
     * Moving forward, we would like to expand the model iteration process to include even more robust models like XGBoost.
