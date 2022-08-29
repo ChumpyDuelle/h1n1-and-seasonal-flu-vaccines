@@ -272,9 +272,9 @@ For any additional questions, please contact **Ian Butler ianbutleremail@gmail.c
 ## Repository Structure
 
 ```
-├── README.md                             <- The top-level README for reviewers of this project
-├── h1n1-and-seasonal-flu-vaccine.ipynb   <- Narrative documentation of analysis in Jupyter notebook
-├── DS_Project_Presentation.pdf           <- PDF version of project presentation
-├── data                                  <- Sourced externally
-└── images                                <- Both sourced externally and generated from code
+├── README.md                                    <- The top-level README for reviewers of this project
+├── h1n1-and-seasonal-flu-vaccine.ipynb          <- Narrative documentation of analysis in Jupyter notebook
+├── H1N1 and Seasonal Flu Vaccines.pdf           <- PDF version of project presentation
+├── data                                         <- Sourced externally
+└── images                                       <- Both sourced externally and generated from code
 ```
