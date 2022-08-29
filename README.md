@@ -23,7 +23,7 @@ Questions to consider:
         * **Tertiary**: can we provide actionable recommendations to improve the rate of innoculation against H1N1?
 * How did we pick the data analysis question(s) that we did?
     * With respect to each of the above questions, we picked the questions as a result of the following thought process:
-    * Ultimately, what we would like to be able to do is increase the population's rate of innoculation against highly infectious respiratory diseases. In order to know what would have to be done to take action in this way, we have to understand what variables are most causing a change in vaccination status for individuals, as well as which of those variables we can actually control. Finally, we can confirm whether or not our understanding of these relationships can be used to accurately predict vaccination status for individuals.
+        * Ultimately, what we would like to be able to do is increase the population's rate of innoculation against highly infectious respiratory diseases. In order to know what would have to be done to take action in this way, we have to understand what variables are most causing a change in vaccination status for individuals, as well as which of those variables we can actually control. Finally, we can confirm whether or not our understanding of these relationships can be used to accurately predict vaccination status for individuals.
 * Why are these questions important from a business perspective?
     * These questions are important from a business perspective because they allow public health officials to make informed decisions about what actions they can take to attempt to improve the resiliency of the population against highly infectious respiratory diseases.
 
