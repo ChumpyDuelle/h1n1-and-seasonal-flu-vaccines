@@ -198,18 +198,50 @@ Questions to consider:
 
 ## Results
 
-Present your key results. For Phase 1, this will be findings from your descriptive analysis.
-
-***
-Questions to consider:
-* How do you interpret the results?
-* How confident are you that your results would generalize beyond the data you have?
 ***
 
-Here is an example of how to embed images from your sub-folder:
+![heatmap](./images/heatmap.png)
 
-### Visual 1
-![graph1](./images/viz1.png)
+Looking at this heatmap, we can see a few interesting things:
+
+* First, based on the gradient of the legend at the right, we can see that no feature or target negatively correlates to any other feature or target by a coefficient of -0.2 or lower, so we can say that no feature or target has a high negative correlation with any other feature or target.
+* Second, there are no features or targets that have a correlation with h1n1_vaccine above 0.5, so we can say that no feature or target has a strong relationship with h1n1_vaccine.
+* Third, there are three features with have a correlation with h1n1_vaccine greater than 0.3:
+    * doctor_recc_h1n1
+        * H1N1 flu vaccine was recommended by doctor. (binary)
+    * opinion_h1n1_risk
+        * Respondent's opinion about risk of getting sick with H1N1 flu without vaccine. (ordinal)
+    * seasonal_vaccine
+        * Whether respondent received seasonal flu vaccine. (binary)
+    * Based on these correlations, we can say that there may be a moderate relationship between these features and the target. However, in order to know whether or not this correlation is causative, we will need to explore these relationships in our modeling process. As we know, correlation does not necessarily mean causation; it just gives us some insight into what we may want to explore.
+* Finally, there are several feature which have correlations higher than 0.5:
+    * behavioral_large_gatherings and behavioral_outside_home
+    * doctor_recc_h1n1 and doctor_recc_seasonal
+    * opinion_h1n1_risk and opinion_seas_risk
+    * Based on this level of correlation, there may be a level of multicollinearity between these variables, but this is also something to explore during model iteration. We'll simply keep this in mind for now.
+
+***
+
+![distribution](./images/h1n1-distribution.png)
+
+Based on the above image of the distribution of the target class, we can easily see that the target is imbalanced in favor of 0 - the respondent did not get the H1N1 Flu Vaccine. With this in mind, a baseline model will likely have a reasonable level of accuracy, which is something we will keep in mind in model iteration.
+
+***
+
+Our most successful model in the iterations we ran of a Dummy Classifier, Logistic Regressions, and Random Forests was a Logistic Regression with the default hyperparameters. This model produced results with the following evaluation metrics:
+* Accuracy: 85%
+* Precision: 70%
+* Recall: 51%
+* F1 Score: 59%
+
+![predictors](./images/top-ten-predictors.png)
+
+Based on the above image of the feature importance of this model, we can see that the three most influental features in predicting whether or not an individual will get the vaccine for the H1N1 flu are these:
+1. seasonal_vaccine
+2. doctor_recc_h1n1
+3. opinion_h1n1_vacc_effective
+
+***
 
 ## Conclusions
 
@@ -218,24 +250,29 @@ Provide your conclusions about the work you've done, including any limitations o
 ***
 Questions to consider:
 * What would you recommend the business do as a result of this work?
+    * As a result of this project, we would recommend that the business observe the following steps:
+        1. Educate the general population on how and why the seasonal flu vaccine works.
+        2. Partner with doctors and other medical professionals to encourage them to encourage their patients to get vaccinated, as their reccomendations directly contribute to the number of people getting the vaccine.
+        3. Provide robust documentation to the population on how and why this specific vaccine for H1N1 works. In addition to understanding how and why vaccines against influenza work in the first place, believing that this specific vaccine also works is a critical element in the decision of an individual to get it or not.
 * What are some reasons why your analysis might not fully solve the business problem?
+    * The number one reason why this analysis might not fully solve the business problem is this:
+        * Despite iterations on multiple models, our best model still presents with a fairly low recall. This may indicate that there are inderlying details in the understanding of how people’s backgrounds, opinions, and health behaviors are related to their personal vaccination patterns that this survey is not picking up on.
 * What else could you do in the future to improve this project?
+    * Moving forward, we would like to expand the model iteration process to include even more robust models like XGBoost.
 ***
 
 ## For More Information
 
-Please review our full analysis in [our Jupyter Notebook](./dsc-phase1-project-template.ipynb) or our [presentation](./DS_Project_Presentation.pdf).
+Please review our full analysis in [our Jupyter Notebook](./h1n1-and-seasonal-flu-vaccine.ipynb) or our [presentation](./DS_Project_Presentation.pdf).
 
-For any additional questions, please contact **name & email, name & email**
+For any additional questions, please contact **Ian Butler ianbutleremail@gmail.com**
 
 ## Repository Structure
 
-Describe the structure of your repository and its contents, for example:
-
 ```
-├── README.md                           <- The top-level README for reviewers of this project
-├── dsc-phase1-project-template.ipynb   <- Narrative documentation of analysis in Jupyter notebook
-├── DS_Project_Presentation.pdf         <- PDF version of project presentation
-├── data                                <- Both sourced externally and generated from code
-└── images                              <- Both sourced externally and generated from code
+├── README.md                             <- The top-level README for reviewers of this project
+├── h1n1-and-seasonal-flu-vaccine.ipynb   <- Narrative documentation of analysis in Jupyter notebook
+├── DS_Project_Presentation.pdf           <- PDF version of project presentation
+├── data                                  <- Sourced externally
+└── images                                <- Both sourced externally and generated from code
 ```
