@@ -265,7 +265,7 @@ Questions to consider:
 
 ## For More Information
 
-Please review our full analysis in [our Jupyter Notebook](./h1n1-and-seasonal-flu-vaccine.ipynb) or our [presentation](./H1N1 and Seasonal Flu Vaccines.pdf).
+Please review our full analysis in [our Jupyter Notebook](./h1n1-and-seasonal-flu-vaccine.ipynb) or our [presentation](./H1N1-and-Seasonal-Flu-Vaccines.pdf).
 
 For any additional questions, please contact **Ian Butler ianbutleremail@gmail.com**
 
