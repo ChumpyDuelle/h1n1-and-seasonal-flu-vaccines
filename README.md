@@ -168,12 +168,32 @@ https://www.census.gov/programs-surveys/metro-micro/about.html
 
 ## Methods
 
-Describe the process for analyzing or modeling the data. For Phase 1, this will be descriptive analysis.
+Describe the process for analyzing or modeling the data.
 
 ***
+
 Questions to consider:
+
 * How did you prepare, analyze or model the data?
+    * We prepared the data in the following ways:
+        * Dropped variables which were either missing half of their values or more than 10% of their values, with no good answer for imputing new values:
+            * health_insurance
+            * employment_industry
+            * employment_occupation
+            * income_poverty
+        * Executed a OneHotEncoder for all features of the object data type. Given that there was no inherent rank to any of the object features, a OneHotEncoder was applied universally to those data types in lieu of using an OrdinalEncoder for any of them.
+    * We analyzed the data in the following ways:
+        * Simple dataframe manipulation:
+            * Observed measures of central tendency for varioues features
+            * Observed distribution of the features and of the target
+            * Observed correlation of features to target and features to features
+        * Visualized correlation of features and target via heatmapping
+    * We modeled the data with the following algorithms:
+        * Dummy Classifier
+        * Logistic Regression
+        * Random Forest
 * Why is this approach appropriate given the data and the business problem?
+    * The approaches were appropraite given the data and the business problem because they allowed us to eliminate features which could not rightly contribute toward the inference or prediction of the target without arbitrarily skewing the distribution of those features.
 ***
 
 ## Results
